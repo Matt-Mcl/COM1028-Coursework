@@ -14,12 +14,17 @@ public class Main {
 			ResultSetMetaData rsmd = rs.getMetaData();
 			int columnsNumber = rsmd.getColumnCount();
 
+			for (int i = 1; i <= columnsNumber; i++) {
+				System.out.print(rsmd.getColumnName(i) + " ");
+			}
+			System.out.println();
+
 			while (rs.next()) {
 				for (int i = 1; i <= columnsNumber; i++) {
 					if (i > 1)
 						System.out.print(",  ");
 					String columnValue = rs.getString(i);
-					System.out.print(columnValue + " " + rsmd.getColumnName(i));
+					System.out.print(columnValue);
 				}
 				System.out.println("");
 			}
