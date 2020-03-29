@@ -1,4 +1,4 @@
-package com.com1028.coursework;
+package org.com1028.coursework;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class BaseQuery {
 	protected Connection con;
 	private final String DRIVER_CLASS = "com.mysql.cj.jdbc.Driver";
-	private final String db = "jdbc:mysql://localhost:3306/classicmodels";
+	private final String db = "jdbc:mysql://localhost:3306/classicmodels?serverTimezone=BST";
 
 	public BaseQuery(String uname, String pwd) {
 		try {
