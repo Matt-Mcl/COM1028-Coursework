@@ -5,10 +5,10 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PaymentsStore {
+public class PaymentsTable {
 	private List<Payment> payments = new ArrayList<Payment>();
 
-	public PaymentsStore(BaseQuery bq) {
+	public PaymentsTable(BaseQuery bq) {
 		super();
 		try {
 			ResultSet rs = bq.useTable("payments");

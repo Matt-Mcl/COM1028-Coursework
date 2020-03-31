@@ -16,18 +16,6 @@ public class Payment {
 		this.amount = amount;
 	}
 
-	public int getCustomerNumber() {
-		return customerNumber;
-	}
-
-	public String getCheckNumber() {
-		return checkNumber;
-	}
-
-	public Date getPaymentDate() {
-		return paymentDate;
-	}
-
 	public double getAmount() {
 		return amount;
 	}
