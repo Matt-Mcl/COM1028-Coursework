@@ -1,8 +1,12 @@
 package org.com1028.coursework;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Requirement1 {
 
-	public void requirement1(BaseQuery bq) {
+	public List<String> requirement1(BaseQuery bq) {
+		List<String> data = new ArrayList<String>();
 		PaymentsTable ps = new PaymentsTable(bq);
 
 		double total = 0;
@@ -16,8 +20,9 @@ public class Requirement1 {
 
 		for (Payment p : ps.getPayments()) {
 			if (p.getAmount() > average) {
-				System.out.println(p.toString());
+				data.add(p.toString());
 			}
 		}
+		return data;
 	}
 }

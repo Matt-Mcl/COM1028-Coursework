@@ -27,4 +27,12 @@ public class BaseQuery {
 		return rs;
 	}
 
+	// Allows for a full SQL query to be passed into the method for
+	// a corresponding ResultSet
+	protected ResultSet performQuery(String query) throws SQLException {
+		Statement s = con.createStatement();
+		ResultSet rs = s.executeQuery(query);
+		return rs;
+	}
+
 }

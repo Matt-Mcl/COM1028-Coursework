@@ -1,15 +1,20 @@
 package org.com1028.coursework;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Requirement3 {
 
-	public void requirement3(BaseQuery bq) {
+	public List<String> requirement3(BaseQuery bq) {
+		List<String> data = new ArrayList<String>();
 		CustomersTable cs = new CustomersTable(bq);
 		OrdersTable os = new OrdersTable(bq);
 		OrderDetailsTable ods = new OrderDetailsTable(bq);
 
 		for (Customer c : cs.getCustomers()) {
 			for (Order o : os.getOrders()) {
-				int total = 0;
+
+				double total = 0;
 				if (c.getCustomerNumber() == o.getCustomerNumber()) {
 					for (OrderDetails od : ods.getOrderDetailsList()) {
 						if (o.getOrderNumber() == od.getOrderNumber()) {
@@ -18,10 +23,10 @@ public class Requirement3 {
 					}
 				}
 				if (total > 25000) {
-					System.out.println(
-							"Customer Number: " + c.getCustomerName() + " | Order Number: " + o.getOrderNumber());
+					data.add("Customer Name: " + c.getCustomerName() + ", Order Number: " + o.getOrderNumber());
 				}
 			}
 		}
+		return data;
 	}
 }

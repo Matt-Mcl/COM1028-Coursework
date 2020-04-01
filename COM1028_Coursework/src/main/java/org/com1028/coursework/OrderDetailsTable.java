@@ -15,7 +15,7 @@ public class OrderDetailsTable {
 			while (rs.next()) {
 				int orderNumber = rs.getInt("orderNumber");
 				int quantityOrdered = rs.getInt("quantityOrdered");
-				int priceEach = rs.getInt("priceEach");
+				double priceEach = rs.getDouble("priceEach");
 				OrderDetails od = new OrderDetails(orderNumber, quantityOrdered, priceEach);
 				this.orderDetailsList.add(od);
 			}

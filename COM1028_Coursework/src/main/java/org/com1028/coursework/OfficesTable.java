@@ -16,15 +16,7 @@ public class OfficesTable {
 			while (rs.next()) {
 				String officeCode = rs.getString("officeCode");
 				String city = rs.getString("city");
-				String phone = rs.getString("phone");
-				String addressLine1 = rs.getString("addressLine1");
-				String addressLine2 = rs.getString("addressLine2");
-				String state = rs.getString("state");
-				String country = rs.getString("country");
-				String postalCode = rs.getString("postalCode");
-				String territory = rs.getString("territory");
-				Office o = new Office(officeCode, city, phone, addressLine1, addressLine2, state, country, postalCode,
-						territory);
+				Office o = new Office(officeCode, city);
 				this.offices.add(o);
 			}
 
