@@ -15,13 +15,14 @@ public class TestRequirement1 {
 	@Test
 	public void testRequirement1() {
 		// Retrieve user database login to produce BaseQuery object.
+		@SuppressWarnings("resource") // Added to suppress scanner.close() warning as closing the scanner causes the
+										// AllTests class to fail when executing more than one test class
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Username: ");
 		String username = scanner.nextLine();
 		System.out.print("Password: ");
 		String password = scanner.nextLine();
 		BaseQuery bq = new BaseQuery(username, password);
-		scanner.close();
 
 		// Create an ArrayList containing the requires rows for Requirement1
 		Requirement1 r1 = new Requirement1();
