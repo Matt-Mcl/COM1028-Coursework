@@ -13,10 +13,9 @@ public class TestRequirement2 {
 
 	@Test
 	public void testRequirement2() {
-		// Retrieve user database login to produce BaseQuery object.
 		BaseQuery bq = new BaseQuery();
 
-		// Create an ArrayList containing the requires rows for Requirement1
+		// Create an ArrayList containing the required rows for Requirement2
 		Requirement2 r2 = new Requirement2();
 		List<String> data = r2.requirement2(bq);
 		// Create an ArrayList to hold data from the database
