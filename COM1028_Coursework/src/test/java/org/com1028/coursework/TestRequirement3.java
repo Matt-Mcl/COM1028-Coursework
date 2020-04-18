@@ -1,6 +1,7 @@
 package org.com1028.coursework;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -41,6 +42,7 @@ public class TestRequirement3 {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+			fail();
 		}
 		// Both arrays must be sorted for requirement 3. The Java I wrote adds the
 		// elements as the are found but the SQL finds all the data and then groups them

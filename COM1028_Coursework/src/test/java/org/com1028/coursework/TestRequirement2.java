@@ -1,6 +1,7 @@
 package org.com1028.coursework;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -38,6 +39,7 @@ public class TestRequirement2 {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+			fail();
 		}
 		// Compare the two ArrayLists
 		assertEquals(databaseData, data);
