@@ -20,6 +20,16 @@ public class BaseQuery {
 		}
 	}
 
+	// Default constructor that uses a default root login
+	public BaseQuery() {
+		try {
+			Class.forName(DRIVER_CLASS);
+			con = DriverManager.getConnection(db, "root", "");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	protected ResultSet useTable(String tableName) throws SQLException {
 		String query = "SELECT * FROM " + tableName;
 		Statement s = con.createStatement();

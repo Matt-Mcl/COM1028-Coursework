@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 import org.junit.Test;
 
@@ -15,14 +14,7 @@ public class TestRequirement3 {
 	@Test
 	public void testRequirement3() {
 		// Retrieve user database login to produce BaseQuery object.
-		@SuppressWarnings("resource") // Added to suppress scanner.close() warning as closing the scanner causes the
-										// AllTests class to fail when executing more than one test class
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Username: ");
-		String username = scanner.nextLine();
-		System.out.print("Password: ");
-		String password = scanner.nextLine();
-		BaseQuery bq = new BaseQuery(username, password);
+		BaseQuery bq = new BaseQuery();
 
 		// Create an ArrayList containing the requires rows for Requirement1
 		Requirement3 r3 = new Requirement3();
